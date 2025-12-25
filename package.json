@@ -2,8 +2,12 @@
   "name": "laundry-sorting",
   "version": "1.0.0",
   "description": "",
-  "main": "game.js",
+  "main": "main.js",
   "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . laundry-sorting --platform=win32 --arch=x64 --out=dist --overwrite",
+    "package-mac": "electron-packager . laundry-sorting --platform=darwin --arch=x64 --out=dist --overwrite",
+    "package-linux": "electron-packager . laundry-sorting --platform=linux --arch=x64 --out=dist --overwrite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/tchikl-h/laundry-sorting/issues"
   },
-  "homepage": "https://github.com/tchikl-h/laundry-sorting#readme"
+  "homepage": "https://github.com/tchikl-h/laundry-sorting#readme",
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-packager": "^17.1.2"
+  }
 }
